@@ -1,0 +1,12 @@
+JS Topics to be covered:
+
+1) RegEx
+2) Call, apply and bind
+3) ES6 Array methods
+4) Callbacks, promises and Async/Await -> AJAX
+
+(JQuery ???)
+
+const [state, setState] = useState([''])
+
+
