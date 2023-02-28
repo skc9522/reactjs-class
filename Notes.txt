@@ -2,8 +2,92 @@ JS Topics to be covered:
 
 1) RegEx
 2) Call, apply and bind
-3) ES6 Array methods
+3) ES6 Array methods -> (map, filter, findIndex, forEach, includes)
 4) Callbacks, promises and Async/Await -> AJAX
+
+What is Asyc Javascript?
+-> Handles multiple tasks simultaneously
+-> Allows a program to continue working on other task while waiting for external events, such as Network Reqs.
+
+
+What are the types of Asyn JS?
+
+1) Callback function 
+2) Promises 
+3) Asyc/Await 
+
+
+1) Callback function: it is a function that is passed as an argument to another function and is executed after the first function has completed its execution.
+
+const newFunc = (newCallback) => {
+// I will perform my tasks and give output
+//newCallback(output)
+
+}
+
+const newCallback = () => {
+    
+}
+
+
+--> Callback Hell: When multiple Callbacks are nested within then that leads to callback hell it is also know as 'Pyramid of Doom'
+
+getData(function (a)) {
+    getMoreData(a, function(b)) {
+        getEvenMoreData(b, function(c)){
+            getEvenEvenMoreData(c, function(d)) {
+                console.log(finalData)
+            }
+        }
+    }
+}
+
+
+2) Promises: it is a way of handling async operations in an organized way. It is similar to CB but offers additional capabilities and the syntax is more readable..
+
+
+        There are 3 states in promises: 
+            1) Pending: Initail state, which is neither fullfilled or rejected
+            2) Fullfilled: Promise is executed successfully
+            3) Rejected: Promise failed
+
+How to create a promise: 
+
+    const myPromise = new Promise(function (res, rej) {
+
+    })
+
+     const myPromise = new Promise(function (res, rej) {
+       setTimeout(() => {
+         res('This is a promise')
+       }, 2000)
+    })
+ 
+ console.log(myPromise)
+
+  Creating a promise with Fetch APIs 
+
+    fetch ('http://random-api.com')  -> [{}, {}, {}]
+        .then(res => res.json())
+        .then(data => {console.log(data)})
+
+        .catch(err => {
+            console.log(err)
+        })
+
+
+3) Asyc/Await: it allows us to write async code in a more sync  and readable way.
+
+ async -> a keyword that is used to declare a function as async
+ await -> a keyword that is used inside the async function to pause the execution of the function until the promise is executed
+
+ const getData = async () => {
+    const res = await fetch('http://random-api.com')
+    const data = await res.json()
+    console.log(data)
+ }
+
+ getData()
 
 (JQuery ???)
 
