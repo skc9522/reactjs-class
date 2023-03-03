@@ -16,7 +16,7 @@ const CodeExample = () => {
 
     return (
         <div>
-            <h1> Value: {value}</h1>
+            <h1> TEST VALUE: {value}</h1>
             <button onClick={() => setValue(value + 1)}>Click Me</button>
 
             <h1> Value: {secondValue}</h1>
