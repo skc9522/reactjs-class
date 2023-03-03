@@ -15,7 +15,6 @@ const CodeFetchApi = () => {
                 console.log(err)
             }
         }
-
         fetchData()
     }, [])
 
