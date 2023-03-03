@@ -94,3 +94,15 @@ How to create a promise:
 const [state, setState] = useState([''])
 
 
+===================== use Effect =====================
+
+> It is a hook in react that allows to perform side effects (eg: like api calls)
+> it accepts 2 arguments 
+> 1st argument is callback function and the 2nd is dependency array (optional)
+> Renders in the initial cycle
+> we cannot use asyc function in the first argument (This HW... WHY?)
+> if dependency array is empty then the useEffect renders only once.
+
+> What is a Clean up function? (HW)
+> PLEASE GET LAPTOPS (MAIN HW)
+
